@@ -1,0 +1,423 @@
+/* ===== Polices ===== */
+
+@font-face {
+    font-family: "SpaceFuture";
+    src: url("../fonts/SPACE FUTURE.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SpaceFuture";
+    src: url("../fonts/SPACE FUTURE-Italic.otf") format("opentype");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "SpaceFuture";
+    src: url("../fonts/SPACE FUTURE-Bold.otf") format("opentype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SpaceFuture";
+    src: url("../fonts/SPACE FUTURE-BoldItalic.otf") format("opentype");
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "SpaceFuture";
+    src: url("../fonts/SPACE FUTURE Light.otf") format("opentype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SpaceFuture";
+    src: url("../fonts/SPACE FUTURE Light-Italic.otf") format("opentype");
+    font-weight: 300;
+    font-style: italic;
+}
+
+/* ===== Base générale ===== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f4f1ec;
+    color: #1a1a1b;
+    font-family: serif;
+    font-weight: normal;
+}
+
+/* ===== Header ===== */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+
+    background-color: #eae5dc;
+    border-bottom: 1px solid #c9c2b8;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 40px;
+    z-index: 1000;
+}
+
+header .logo {
+    width: 160px;
+    height: 40px;
+}
+/* ===== Navigation ===== */
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: inherit;
+}
+/* ===== Zone principale ===== */
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 120px;
+}
+/* ===== Frise chronologique ===== */
+
+.frise {
+    min-height: 220px;
+    margin-bottom: 80px;
+
+    border: 1px solid #c9c2b8;
+    background-color: #efeae2;
+}
+/* ===== Contenu ===== */
+
+.contenu {
+    min-height: 400px;
+}
+/* ===== Footer ===== */
+
+footer {
+    margin-top: 120px;
+    padding: 40px;
+
+    border-top: 1px solid #c9c2b8;
+}
+
+/* ===== Titres ===== */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "SpaceFuture", serif;
+    font-weight: normal;
+}
+/* ===== Frise chronologique ===== */
+
+.frise {
+    margin: 3rem 0;
+    padding: 2rem;
+    border-left: 4px solid #333;
+}
+
+.frise h2 {
+    margin-bottom: 1.5rem;
+}
+
+.timeline {
+    list-style: none;
+    padding-left: 0;
+}
+
+.timeline li {
+    position: relative;
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+}
+
+.timeline li::before {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 0.4em;
+    width: 12px;
+    height: 12px;
+    background-color: #333;
+    border-radius: 50%;
+}
+
+.annee {
+    font-weight: bold;
+    margin-right: 1rem;
+}
+
+.evenement {
+    display: inline-block;
+}
+/* ===== Navigation principale ===== */
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    list-style: none;
+    padding: 1rem 0;
+    margin: 0;
+}
+
+header nav ul li {
+    margin: 0;
+}
+
+header nav ul li a {
+    display: block;
+    padding: 0.75rem 1.25rem;
+    min-width: 140px;
+    text-align: center;
+
+    border: 2px solid #333;
+    background-color: #f4f1ec;
+    color: #1a1a1a;
+    text-decoration: none;
+
+    font-family: "SpaceFuture", serif;
+    font-size: 0.95rem;
+}
+
+header nav ul li a:hover {
+    background-color: #333;
+    color: #f4f1ec;
+}
+/* ===== Frise chronologique longue ===== */
+
+.frise-longue {
+    margin: 3rem auto;
+    max-width: 800px;
+    border-left: 6px solid #333;
+    padding-left: 2rem;
+}
+
+.timeline-longue {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.timeline-longue li {
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.timeline-longue li::before {
+    content: "";
+    position: absolute;
+    left: -19px;
+    top: 0.6rem;
+    width: 16px;
+    height: 16px;
+    background-color: #333;
+    border-radius: 50%;
+}
+
+.annee {
+    font-family: "SpaceFuture", serif;
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.bloc-evenement {
+    border: 2px solid #333;
+    padding: 1rem;
+    background-color: #f4f1ec;
+}
+/* =========================
+   BIBLIOTHEQUE CINEMA
+   ========================= */
+
+.bibliotheque-cinema {
+    max-width: 1000px;
+    margin: 4rem auto;
+    padding: 3rem;
+    background: rgba(10, 10, 10, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(2px);
+}
+
+.bibliotheque-cinema .introduction {
+    font-style: italic;
+    margin-bottom: 3rem;
+    color: #ccc;
+}
+
+.categorie {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.categorie h2 {
+    margin-bottom: 1.5rem;
+}
+
+.sous-categorie {
+    margin-left: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.sous-categorie h3 {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.5rem;
+}
+
+.films {
+    list-style: none;
+    padding-left: 1rem;
+}
+
+.films li {
+    margin: 0.4rem 0;
+}
+
+.films a {
+    text-decoration: none;
+    color: #e0e0e0;
+}
+
+.films a:hover {
+    text-decoration: underline;
+}
+/* =========================
+   CINÉMA — BANDEROLES (final)
+   ========================= */
+
+.categorie-cinema {
+    margin: 40px auto;
+    max-width: 1100px;
+}
+
+.categorie-cinema h2 {
+    margin-bottom: 12px;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 4px;
+}
+
+.banderole {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.banderole img {
+    height: 180px;
+    border: 2px solid #fff;
+    transition: transform 0.2s;
+}
+
+.banderole img:hover {
+    transform: scale(1.05);
+}
+/* =========================
+   LITTERATURE — RAYONS
+   ========================= */
+
+.oeuvres.cache {
+    display: none;
+}
+
+.rayon {
+    margin-bottom: 2rem;
+}
+
+.rayon-titre {
+    cursor: pointer;
+    user-select: none;
+}
+
+.rayon-titre::before {
+    content: "▸ ";
+    opacity: 0.6;
+}
+
+.rayon.open .rayon-titre::before {
+    content: "▾ ";
+}
+
+.rayon-oeuvres {
+    display: none;
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+}
+.rayon.open .rayon-oeuvres {
+    display: block;
+}
+.rayon-oeuvres li {
+    margin: 0.3rem 0;
+    list-style: "📖 ";
+}
+.bibliotheque {
+    max-width: 700px;
+    margin: 40px auto;
+}
+
+.categorie {
+    border: 1px solid #444;
+    margin-bottom: 12px;
+    background: #f5f0e6;
+}
+
+.categorie-titre {
+    width: 100%;
+    text-align: left;
+    padding: 14px;
+    font-size: 1.1em;
+    background: #e6dfd0;
+    border: none;
+    cursor: pointer;
+}
+
+.categorie-titre:hover {
+    background: #ded6c5;
+}
+
+.categorie-contenu {
+    display: none;
+    padding: 10px 20px;
+}
+
+.categorie-contenu li {
+    margin: 6px 0;
+}
+.rayon-oeuvres {
+    display: none;
+}
+
+.frame.titre {
+    background: #000;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.frame:hover {
+    background: #e6dfd0;
+}

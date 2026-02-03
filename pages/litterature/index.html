@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Littérature — Science-Fiction</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<script>
+const searchInput = document.querySelector('.recherche input');
+const items = document.querySelectorAll('.oeuvres li');
+
+searchInput.addEventListener('input', function () {
+    const value = this.value.toLowerCase();
+
+    items.forEach(item => {
+        const text = item.dataset.search;
+        item.style.display = text.includes(value) ? 'list-item' : 'none';
+    });
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.rayon-titre').forEach(titre => {
+        titre.addEventListener('click', () => {
+            const rayon = titre.parentElement;
+            rayon.classList.toggle('open');
+        });
+    });
+});
+</script>
+
+<body>
+
+<header>
+    <h1>Littérature de science-fiction</h1>
+
+    <nav>
+        <ul>
+            <li><a href="../../index.html">Accueil</a></li>
+            <li><a href="../frise.html">Frise chronologique</a></li>
+            <li><a href="../cinema/bibliotheque.html">Cinéma</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+
+<section class="bibliotheque">
+
+    <div class="categorie">
+        <button class="categorie-titre">
+            Extra-terrestres
+        </button>
+        <ul class="categorie-contenu">
+            <li><a href="#">La Guerre des Mondes — H. G. Wells</a></li>
+        </ul>
+    </div>
+
+    <div class="categorie">
+        <button class="categorie-titre">
+            Ville-machine
+        </button>
+        <ul class="categorie-contenu">
+            <li><a href="#">Metropolis — Thea von Harbou</a></li>
+        </ul>
+    </div>
+
+    <div class="categorie">
+        <button class="categorie-titre">
+            Science sur l’homme
+        </button>
+        <ul class="categorie-contenu">
+            <li><a href="#">L’Île du docteur Moreau — H. G. Wells</a></li>
+            <li><a href="#">Frankenstein — Mary Shelley</a></li>
+        </ul>
+    </div>
+
+</section>
+
+</main>
+
+<footer>
+    <p>Bibliothèque de science-fiction — Littérature</p>
+</footer>
+<script src="litterature.js"></script>
+
+</body>
+</html>
