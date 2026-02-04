@@ -6,9 +6,9 @@ media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
 collections:
-  - name: "litterature"
-    label: "Littérature"
-    folder: "pages/litterature"
+  - name: "articles"
+    label: "Articles"
+    folder: "articles"
     create: true
     slug: "{{slug}}"
     fields:
